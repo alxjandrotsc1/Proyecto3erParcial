@@ -8,75 +8,74 @@
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
+}
 
-  .logo img {
-    height: 40px;
-  }
+.navbar .logo img {
+  height: 40px;
+}
 
-  .menu-icon {
-    display: none;
-    flex-direction: column;
-    justify-content: space-around;
-    width: 28px;
-    height: 24px;
-    background: transparent;
-    border: none;
-    cursor: pointer;
+.navbar .menu-icon {
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 28px;
+  height: 24px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
 
-    span {
-      display: block;
-      height: 3px;
-      background-color: @color-acento;
-      margin-bottom: 5px;
-      transition: 0.3s ease;
-    }
-  }
+.navbar .menu-icon span {
+  display: block;
+  height: 3px;
+  background-color: #397e94; /* reemplaza @color-acento */
+  margin-bottom: 5px;
+  transition: 0.3s ease;
+}
 
-  .nav-links {
+.navbar .nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.navbar .nav-links a {
+  color: #397e94; /* reemplaza @color-acento */
+  text-transform: uppercase;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.navbar .nav-links a:hover {
+  color: #2d6578; /* ejemplo para darken(@color-acento, 10%) */
+  transform: scale(1.1);
+}
+
+.navbar .nav-links.activo {
+  display: flex;
+  flex-direction: column;
+  animation: slideDown 0.4s ease forwards;
+}
+
+@media (max-width: 768px) {
+  .navbar .menu-icon {
     display: flex;
-    gap: 20px;
-
-    a {
-      color: @color-acento;
-      text-transform: uppercase;
-      font-weight: 500;
-      transition: color 0.3s ease;
-
-      &:hover {
-        color: darken(@color-acento, 10%);
-        transform: scale(1.1);
-      }
-    }
-
-    &.activo {
-      display: flex;
-      flex-direction: column;
-      animation: slideDown 0.4s ease forwards;
-    }
   }
 
-  @media (max-width: 768px) {
-    .menu-icon {
-      display: flex;
-    }
-
-    .nav-links {
-      display: none;
-      width: 100%;
-      flex-direction: column;
-      background-color: @color-primario;
-      padding: 10px 0;
-      position: absolute;
-      top: 60px;
-      right: 0;
-
-      a {
-        padding: 10px 20px;
-        border-top: 1px solid rgba(255,255,255,0.2);
-      }
-    }
+  .navbar .nav-links {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    background-color: @color-primario; /* reemplaza @color-primario */
+    padding: 10px 0;
+    position: absolute;
+    top: 60px;
+    right: 0;
   }
 
+  .navbar .nav-links a {
+    padding: 10px 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+  }
 }
 
 @keyframes slideDown {
@@ -89,4 +88,3 @@
     opacity: 1;
   }
 }
-
