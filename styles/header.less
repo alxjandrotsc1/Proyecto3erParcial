@@ -1,5 +1,10 @@
+:root {
+  --color-acento: #397e94;
+  --color-primario: #ffffff;
+}
+
 .navbar {
-  background-color: #ffffff;
+  background-color: var(--color-primario);
   padding: 15px 20px;
   position: sticky;
   top: 0;
@@ -14,7 +19,7 @@
   height: 40px;
 }
 
-.navbar .menu-icon {
+.menu-icon {
   display: none;
   flex-direction: column;
   justify-content: space-around;
@@ -25,56 +30,57 @@
   cursor: pointer;
 }
 
-.navbar .menu-icon span {
+.menu-icon span {
   display: block;
   height: 3px;
-  background-color: #397e94; /* reemplaza @color-acento */
+  background-color: var(--color-acento);
   margin-bottom: 5px;
   transition: 0.3s ease;
 }
 
-.navbar .nav-links {
+.nav-links {
   display: flex;
   gap: 20px;
 }
 
-.navbar .nav-links a {
-  color: #397e94; /* reemplaza @color-acento */
+.nav-links a {
+  color: var(--color-acento);
   text-transform: uppercase;
   font-weight: 500;
   transition: color 0.3s ease;
+  text-decoration: none;
 }
 
-.navbar .nav-links a:hover {
-  color: #2d6578; /* ejemplo para darken(@color-acento, 10%) */
+.nav-links a:hover {
+  color: #2e6777;
   transform: scale(1.1);
 }
 
-.navbar .nav-links.activo {
-  display: flex;
-  flex-direction: column;
-  animation: slideDown 0.4s ease forwards;
-}
-
 @media (max-width: 768px) {
-  .navbar .menu-icon {
+  .menu-icon {
     display: flex;
   }
 
-  .navbar .nav-links {
+  .nav-links {
     display: none;
     width: 100%;
     flex-direction: column;
-    background-color: @color-primario; /* reemplaza @color-primario */
+    background-color: var(--color-acento);
     padding: 10px 0;
     position: absolute;
     top: 60px;
     right: 0;
   }
 
-  .navbar .nav-links a {
+  .nav-links a {
     padding: 10px 20px;
     border-top: 1px solid rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+  }
+
+  .nav-links.activo {
+    display: flex;
+    animation: slideDown 0.4s ease forwards;
   }
 }
 
