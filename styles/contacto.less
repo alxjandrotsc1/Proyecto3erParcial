@@ -1,0 +1,68 @@
+.contacto {
+  padding: 60px 20px;
+  background-color: #f4f4f4;
+  text-align: center;
+
+  h2 {
+    color: @color-acento;
+    margin-bottom: 20px;
+  }
+
+  p {
+    margin-bottom: 30px;
+    font-size: 1.1rem;
+  }
+
+  .form-contacto {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+
+    .form-group {
+      margin-bottom: 20px;
+
+      label {
+        display: block;
+        font-weight: bold;
+        margin-bottom: 8px;
+      }
+
+      input,
+      textarea {
+        width: 100%;
+        padding: 10px;
+        border-radius: @radio-borde;
+        border: 1px solid #ccc;
+        font-family: @fuente-principal;
+      }
+
+      textarea {
+        resize: vertical;
+      }
+    }
+
+    button {
+      .btn-base();
+      background-color: @color-acento;
+      color: white;
+      border: none;
+
+      &:hover {
+        background-color: darken(@color-acento, 10%);
+      }
+    }
+  }
+}
+
+.mapa-contacto {
+  text-align: center;
+}
+
+
+.mapa-contacto iframe {
+  width: 350px;
+  height: 350px;
+  border: none;
+  border-radius: 8px;
+}
+

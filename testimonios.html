@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TodoAudio - Testimonios</title>
+  <link rel="stylesheet" href="/styles/main.less" />
+</head>
+<body>
+
+  {{> header }}
+
+  <section class="testimonios" id="testimonios">
+    <div class="container">
+      <h2>Testimonios</h2>
+
+      <div class="grid-testimonios">
+        {{#each testimonios}}
+          {{> testimonio}}
+        {{/each}}
+      </div>
+    </div>
+  </section>
+
+  {{> footer }}
+
+</body>
+
+<script src="data/nav.js"></script>
+</html>

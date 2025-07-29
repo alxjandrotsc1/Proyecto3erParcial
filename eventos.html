@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TodoAudio – Eventos</title>
+  <link rel="stylesheet" href="/styles/main.less"/>
+</head>
+<body>
+
+  {{> header }}
+
+  <section class="eventos-realizados" id="eventos">
+    <div class="container">
+      <h2>Eventos Destacados</h2>
+      <p>Algunos de los conciertos más importantes confirmados para Honduras en 2025.</p>
+      <div class="grid-eventos">
+        {{#each eventos}}
+          {{> evento}}
+        {{/each}}
+      </div>
+    </div>
+  </section>
+
+  {{> footer }}
+
+</body>
+
+<script src="data/nav.js"></script>
+</html>

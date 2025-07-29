@@ -1,0 +1,28 @@
+.eventos {
+  padding: 60px 20px;
+  background-color: @color-secundario;
+  text-align: center;
+  color: @color-primario;
+
+  h2 {
+    color: @color-primario;
+  }
+
+  p {
+    max-width: 700px;
+    margin: 0 auto 30px;
+    font-size: 1.1rem;
+  }
+
+  .btn {
+    .btn-base();
+    background-color: @color-primario;
+    color: @color-acento;
+
+    &:hover {
+      background-color: darken(@color-acento, 20%);
+      color: @color-primario;
+    }
+  }
+}
+

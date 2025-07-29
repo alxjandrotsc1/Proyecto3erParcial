@@ -1,0 +1,23 @@
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-base() {
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.fadeIn(@delay: 0s) {
+  animation: fadeIn @duracion-animacion @easing @delay both;
+}
+
+.slideUp(@delay: 0s) {
+  animation: slideUp @duracion-animacion @easing @delay both;
+}
+

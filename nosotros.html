@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TodoAudio - Nosotros</title>
+  <link rel="stylesheet" href="/styles/main.less" />
+</head>
+<body>
+
+  {{> header }}
+
+  <section class="nosotros" id="nosotros">
+    <div class="container">
+      <h2>🎧 ¿Quiénes Somos?</h2>
+
+      {{#each nosotros}}
+        <div class="contenido-nosotros">
+          {{#each parrafos}}
+            <p>{{{this}}}</p>
+          {{/each}}
+        </div>
+      {{/each}}
+      
+    </div>
+  </section>
+
+  {{> footer }}
+
+</body>
+
+<script src="data/nav.js"></script>
+</html>

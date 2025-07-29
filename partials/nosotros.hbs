@@ -1,0 +1,10 @@
+<section class="contenedor-nosotros">
+  {{#each nosotros}}
+    <div class="tarjeta-nosotros">
+      <h2>{{titulo}}</h2>
+      {{#each parrafos}}
+        <p>{{{this}}}</p>
+      {{/each}}
+    </div>
+  {{/each}}
+</section>

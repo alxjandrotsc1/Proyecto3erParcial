@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TodoAudio - Soluciones Auditivas</title>
+  <link rel="stylesheet" href="/styles/main.less" />
+</head>
+
+<body>
+
+  {{> header }}
+
+  <section class="servicios" id="servicios">
+  <div class="container">
+    <h2 class="titulo-servicios">Nuestros Servicios</h2>
+
+    <div class="grid-tarjetas">
+      {{#each servicio}}
+        {{> servicio }}
+      {{/each}}
+    </div>
+  </div>
+</section>
+
+  {{> footer }}
+
+</body>
+<script src="data/nav.js"></script>
+</html>

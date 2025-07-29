@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TodoAudio - Soluciones Auditivas</title>
+  <link rel="stylesheet" href="/styles/main.less" />
+</head>
+
+<body>
+
+  {{> header }}
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h1> Bienvenido a <span class="highlight">TodoAudio</span></h1>
+        <p>Expertos en sonido profesional para tus eventos más importantes.</p>
+        <a href="#servicios" class="btn">Conoce nuestros servicios</a>
+      </div>
+    </section>
+
+    <section class="info-2">
+      <div class="columna-izquierda">
+        {{> mision }}
+        {{> vision }}
+      </div>
+      <div class="columna-derecha">
+        {{> servicios }}
+      </div>
+    </section>
+
+    {{> eventos }}
+    {{> contacto }}
+
+  </main>
+
+  {{> footer }}
+
+</body>
+
+<script src="data/nav.js"></script>
+</html>
