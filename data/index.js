@@ -18,7 +18,6 @@ export const getPageContext = (pagePath)=>{
         case '/eventos.html':
             pageVariables = eventosPageData
             break;
-            break;
         case '/testimonios.html':           
             pageVariables = testimoniosPageData
             break;
